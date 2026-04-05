@@ -1,0 +1,12 @@
+
+run_id,note,learning_rate,batch_size,gamma,exploration_fraction,exploration_final_eps,buffer_size,train_freq,target_update_interval,total_timesteps,mean_reward,std_reward,convergence_episode,train_time_s
+1,Baseline defaults,0.0001,32,0.95,0.3,0.05,5000,4,500,40000,45.15,11.983,6,32.6
+2,High learning rate,0.0005,32,0.95,0.3,0.05,5000,4,500,40000,43.75,7.985,5,33.6
+3,Low LR + high exploration,5e-05,64,0.97,0.5,0.1,10000,4,1000,40000,43.6,19.936,5,33.57
+4,"Large batch, fast target updates",0.0002,128,0.99,0.2,0.02,10000,1,250,40000,51.5,2.335,5,98.14
+5,High gamma (long-horizon),0.0001,64,0.999,0.4,0.05,10000,4,500,40000,31.4,17.913,8,33.49
+6,Small buffer (recency bias),0.0003,32,0.95,0.3,0.08,2000,2,200,40000,49.2,4.518,5,53.22
+7,Very high exploration,0.0001,64,0.97,0.7,0.15,10000,4,500,40000,51.5,3.008,9,32.05
+8,"Aggressive (high LR, tiny batch)",0.001,16,0.95,0.2,0.05,5000,1,100,40000,48.6,4.358,5,92.01
+9,"Very slow, large buffer",1e-05,128,0.99,0.6,0.05,20000,8,1000,40000,46.0,8.741,5,22.53
+10,Balanced / tuned best,0.0002,64,0.99,0.4,0.05,10000,4,500,40000,47.45,9.269,9,33.41
